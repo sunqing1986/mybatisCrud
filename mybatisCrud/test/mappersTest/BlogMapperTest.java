@@ -15,6 +15,7 @@ public class BlogMapperTest {
 		
 		Student student = studentMapper.selectByPrimaryKey(3);
 		System.out.println("hahahha");
+		System.out.println("再添加一次");
 		System.out.println(student);
 		
 		session.commit();
