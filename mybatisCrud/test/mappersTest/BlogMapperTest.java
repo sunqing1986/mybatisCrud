@@ -15,7 +15,6 @@ public class BlogMapperTest {
 		
 		Student student = studentMapper.selectByPrimaryKey(3);
 		System.out.println("hahahha");
-		System.out.println("本句话是在github上修改的");
 		System.out.println(student);
 		
 		session.commit();
