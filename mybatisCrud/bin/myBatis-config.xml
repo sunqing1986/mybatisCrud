@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--引入配置文件-->
+    <properties resource="db.properties"></properties>
+<!--给映射类定义别名-->
+    <typeAliases>
+        <!--  <typeAlias type="com.qf.mybatis.pojo.Blog" alias="Blog"/>  给Blog类起个别名来代替他的全路径名-->
+        <package name="com.qf.mybatis.pojo"/>   <!-- 也可以定义整个包,表明将这个包下的所有类都设定别名,别名即类名.-->
+    </typeAliases>
+    <!--定义数据源-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--定义映射文件-->
+    <mappers>
+    	<!-- <mapper class="com.qf.mybatis.mappers"/> -->
+        <!--<mapper resource="com/qf/mybatis/mappers/BlogMapper.xml"/>-->
+     <package name="com.qf.mybatis.mappers"/>    <!--  另一种定义映射文件的方法,直接定义整个装有好多映射文件的包.-->
+    </mappers>
+</configuration>
