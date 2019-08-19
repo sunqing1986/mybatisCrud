@@ -1,6 +1,6 @@
 package com.qf.mybatis.pojo;
 
-public class Student   {
+public class Student {
     private Integer stuid;
 
     private String stuName;
